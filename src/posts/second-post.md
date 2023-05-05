@@ -1,5 +1,5 @@
 ---
-title: second Post
+title: Second Post
 description: This is my second post.
 date: '2020-01-01'
 categories:
@@ -13,6 +13,4 @@ published: true
 
 Media inside the **static** folder can be referenced with the **$assets** variable.
 
-![Svelte][def]
-
-[def]: favicon.png
+![Svelte](favicon.png)
