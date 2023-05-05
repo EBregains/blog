@@ -5,6 +5,10 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 import { escapeSvelte, mdsvex } from 'mdsvex';
 // Dependency to highlight code blocks
 import shiki from 'shiki';
+// Processor
+import remarkUnwrapImages from 'remark-unwrap-images';
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
 
 /** @type {import('mdsvex').MdsvexOptions;} */
 const mdsvexConfig = {
@@ -18,7 +22,9 @@ const mdsvexConfig = {
       const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
       return `{@html \`${html}\`}}`;
     }
-  }
+  },
+  remarkPlugins: [remarkUnwrapImages, [remarkToc, {tight: true}]],
+  rehypePlugins: [rehypeSlug],
 }
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

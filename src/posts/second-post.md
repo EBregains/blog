@@ -9,6 +9,7 @@ categories:
 published: true
 ---
 
+## Table of Contents
 ## Svelte
 
 Media inside the **static** folder can be referenced with the **$assets** variable.
