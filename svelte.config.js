@@ -20,7 +20,7 @@ const mdsvexConfig = {
     highlighter: async (code, lang = 'text') => {
       const highlighter = await shiki.getHighlighter({ theme: 'poimandres' });
       const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
-      return `{@html \`${html}\`}}`;
+      return `{@html \`${html}\`}`;
     }
   },
   remarkPlugins: [remarkUnwrapImages, [remarkToc, {tight: true}]],

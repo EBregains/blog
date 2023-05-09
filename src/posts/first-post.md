@@ -20,3 +20,4 @@ fuction greeting(name: string) {
   console.log(`Hello ${name}!`);
 }
 ```
+Bye!
