@@ -21,3 +21,6 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+git fetch origin
+git checkout 1-no-contact-page-is-created-yet
