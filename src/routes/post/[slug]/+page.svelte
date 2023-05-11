@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { formatDate } from "$lib/utils";
+	import * as config from "$lib/config";
   import type { PageData } from "./$types";
 
   export let data: PageData;
 </script>
 
 <svelte:head>
-  <title>{data.meta.title}</title>
+  <title>{data.meta.title} | {config.title}</title>
   <meta property="og:type" content="article">
   <meta property="og:title" content={data.meta.title}>
 </svelte:head>
@@ -19,7 +20,7 @@
 
   <div class="tags">
     {#each data.meta.categories as category}
-      <a href={'./'} class="surface-4">&num;{category}</a>
+      <a href={`/categories/${category}`} class="surface-4">&num;{category}</a>
     {/each}
   </div>
 

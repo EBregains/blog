@@ -2,16 +2,19 @@
 	import type { PageData } from "./$types";
   import * as config from "$lib/config";
 	import { formatDate } from "$lib/utils";
+  import { page } from "$app/stores";
 
   export let data: PageData;
-
+  export let category = $page.params.category ;
 </script>
 
 <svelte:head>
-  <title>{config.title}</title>
+  <title>{config.title} | {category}</title>
 </svelte:head>
 
 <section>
+  <h2>#{category}</h2>
+  <a href="/categories"> &lt; Back to categories</a>
   <ul class="posts">
     {#each data.posts as post}
       <li class='post'>
