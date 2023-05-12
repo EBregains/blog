@@ -12,11 +12,13 @@
   <title>{config.title} | {category}</title>
 </svelte:head>
 
+
+<h2>#{category}</h2>
+<a href="/categories"> &lt; Back to categories</a>
+
 <section>
-  <h2>#{category}</h2>
-  <a href="/categories"> &lt; Back to categories</a>
   <ul class="posts">
-    {#each data.posts as post}
+    {#each data.filteredPosts as post}
       <li class='post'>
         <a href={`/post/${post.slug}`} class="title">{post.title}</a>
         <p class="date">{formatDate(post.date)}</p>
@@ -27,6 +29,11 @@
 </section>
 
 <style>
+
+  section{
+    margin-block: var(--size-7);
+  }
+
   .posts {
     display: grid;
     gap: var(--size-7);   

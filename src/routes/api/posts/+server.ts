@@ -1,8 +1,7 @@
 import type { Categories, Post } from "$lib/types";
 import { json, type RequestHandler } from "@sveltejs/kit";
-import type { Cat } from "lucide-svelte";
 
-async function getPosts(category?: Categories) {
+async function getPosts() {
 
   let posts: Post[] = []; 
 
@@ -18,9 +17,6 @@ async function getPosts(category?: Categories) {
     }
   }
 
-  if (category) {
-    posts = posts.filter(post => post.categories.includes(category));
-  }
   posts = posts.sort(
     (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
   );
@@ -30,11 +26,7 @@ async function getPosts(category?: Categories) {
 
 export const GET: RequestHandler = async ({url}) => {
   let posts: Post[];
-  if ( url.searchParams.has("category") ) {
-  const category: Categories = url.searchParams.get("category") as Categories;
-  posts = await getPosts(category);
-  } else { 
-    posts = await getPosts();
-  }
+  posts = await getPosts();
+
   return json(posts);
 };
