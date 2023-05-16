@@ -13,18 +13,12 @@
   <div class="hamburger">
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <div 
-    class="wrapper"
+    class="wrapper "
     on:click={() => active = !active}
     on:keypress={() => active = !active}
     tabindex="0"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
-      <path d="M0 0h24v24H0z" fill="none" />
-      <path
-        d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
-      />
-    </svg>
-  </div>
+    class:selected = {active}
+  ></div>
   <ul class="links" class:active>
     <li>
       <a on:click={() => active = !active} href="/about">About</a>
@@ -40,31 +34,50 @@
     </li>
   </ul>
   </div>
-
-  <Toggle />
+  <div class="toggle">
+    <Toggle />
+  </div>
 </nav>
 
 <style>
   nav {
     padding-block: var(--size-3);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'title toggle links';
     align-items: center;
+    justify-items: center;
   }
   .wrapper {
     border: solid var(--border-size-1) var(--gray-5);
-    border-radius: var(--radius-blob-2);
+    border-radius: var(--radius-blob-3);
     padding: var(--size-2);
-    width: fit-content;
+    width: var(--size-8);
+    grid-area: links;
+  }
+  .wrapper:hover {
+    background: var(--surface-4);
+  }
+  .wrapper::before{
+    margin: 7px;
+    content: '☰';
+  }
+  .selected {
+    background: var(--surface-3);
+  }
+  .selected::before {
+    content: 'X';
+    margin: 10px;
   }
   .links {
     visibility: hidden;
     padding-block: var(--size-3);
+    margin-block: var(--size-2);
     background-color: var(--surface-4);
     border-radius: var(--radius-2);
     box-shadow: var(--shadow-1) var(--gray-5);
     position: absolute;
+    z-index: 1;
   }
   li {
     padding: var(--size-1);
@@ -72,11 +85,15 @@
   .active {
     visibility:visible;
     padding: var(--size-3);
-
+    background: var(--surface-4);
   }
   a {
     color: inherit;
     text-decoration: none;
+  }
+  .toggle {
+    grid-area: toggle;
+    justify-self: center;
   }
 
   .title {
@@ -88,6 +105,9 @@
     color: var(--surface-1);
     font-size: var(--font-size-fluid-1);
     width: fit-content;
+  }
+  .title:hover {
+    animation: logo-on-hover 2s infinite;
   }
 
   @media (min-width: 768px) {
@@ -107,4 +127,24 @@
       gap: var(--size-7);
     }
   }
+
+  /* animations */
+  @keyframes logo-on-hover {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
 </style>
