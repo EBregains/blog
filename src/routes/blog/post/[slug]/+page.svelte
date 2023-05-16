@@ -4,6 +4,8 @@
   import type { PageData } from "./$types";
 
   export let data: PageData;
+  console.log(data);
+  
 </script>
 
 <svelte:head>
@@ -20,7 +22,7 @@
 
   <div class="tags">
     {#each data.meta.categories as category}
-      <a href={`/categories/${category}`} class="surface-4">&num;{category}</a>
+      <a href={`/blog/categories/${category}`} class="surface-4">&num;{category}</a>
     {/each}
   </div>
 

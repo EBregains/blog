@@ -14,13 +14,13 @@
 
 
 <h2>#{category}</h2>
-<a href="/categories"> &lt; Back to categories</a>
+<a href="/blog/categories"> &lt; Back to categories</a>
 
 <section>
   <ul class="posts">
     {#each data.filteredPosts as post}
       <li class='post'>
-        <a href={`/post/${post.slug}`} class="title">{post.title}</a>
+        <a href={`/blog/post/${post.slug}`} class="title">{post.title}</a>
         <p class="date">{formatDate(post.date)}</p>
         <p class="description">{post.description}</p>
       </li>

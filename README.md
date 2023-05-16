@@ -1,26 +1,29 @@
 
-## Developing
+# Personal Blog / Semi-Portfolio
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This is my personal blog, which I use to write about things I find interesting. It's also a semi-portfolio, where I showcase some of my projects.
 
-```bash
-npm run dev
+## Tecnologies
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- HTML5
+- CSS3 (with OpenProps)
+- TypeScript
+- Svelte
+- SvelteKit
+- Markdown (with mdsvex reader and shiki to highlight code)
+- RSS script
 
-## Building
+Deployed on Vercel, the site is prerender and amazingly fast! It has theme switcher to go dark and light.
 
-To create a production version of your app:
+## Next Steps
 
-```bash
-npm run build
-```
 
-You can preview the production build with `npm run preview`.
+- [ ] Add an about page
+-- [ ] Add a projects page
+- [ ] Add a contact page
+- [ ] Add a search bar  
+- [ ] Add a comment section
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-git fetch origin
-git checkout 1-no-contact-page-is-created-yet
+- [ ] Keep writing posts
+
