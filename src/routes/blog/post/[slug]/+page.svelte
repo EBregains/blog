@@ -4,7 +4,6 @@
   import type { PageData } from "./$types";
 
   export let data: PageData;
-  console.log(data);
   
 </script>
 
@@ -35,6 +34,7 @@
   article {
     max-inline-size: var(--size-content-3);
     margin-inline: auto;
+    margin-top: var(--size-9);
   }
 
   h1 {
@@ -42,17 +42,8 @@
   }
 
   h1 + p {
-    margin-top: var(--size-2);
+    margin-top: var(--size-1);
     color: var(--text-2);
   }
 
-  .tags {
-    display: flex;
-    gap: var(--size-3);
-    margin-top: var(--size-7);
-  }
-
-  .tags > * {
-    padding: var(--size-2) var(--size-3);
-  }
 </style>

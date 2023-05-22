@@ -13,7 +13,7 @@
 </svelte:head>
 
 
-<h2>#{category}</h2>
+<h2>{category}</h2>
 <a href="/blog/categories"> &lt; Back to categories</a>
 
 <section>
@@ -30,6 +30,12 @@
 
 <style>
 
+  h2::before {
+    content: "#";
+    padding-right: var(--size-3);
+    color: var(--text-2);
+    font-weight: 100;
+  }
   section{
     margin-block: var(--size-7);
   }

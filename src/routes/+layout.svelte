@@ -11,7 +11,7 @@
   import '../app.css'
 	import type { PageData } from './$types';
 
-  export let data;
+  export let data: PageData;
 </script>
 
 <div class="layout">
@@ -29,18 +29,20 @@
 <style>
   .layout {
     height: 100%;
+    width: 100%;
     max-inline-size: 1440px;
+    margin-inline: auto;
     display: grid;
     grid-template-rows: auto 1fr auto;
 
-    margin-inline: auto;
-    padding-inline: var(--size-7);
+    padding-inline: var(--size-9);
   }
 
   main {
-    padding-block: var(--size-3);
-    display: grid;
-    place-content: center;
+    padding-bottom: var(--size-9);
+    display: flex;
+    height: 100%;
+    width: 100%;
   }
 
 </style>

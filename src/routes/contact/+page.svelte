@@ -6,5 +6,11 @@
   <title>{config.title} | Contact</title>
 </svelte:head>
 
-<h1>Contact</h1>
-<p>Alo, who's here?</p>
+<section>
+  <h2>Contact</h2>
+  <p>Alo, who's here?</p>
+</section>
+
+<style>
+
+</style>
