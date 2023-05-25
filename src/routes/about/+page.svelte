@@ -1,7 +1,15 @@
 <script lang="ts">
   import * as config from "$lib/config";
+	import type { Post } from "$lib/types";
+	import type { PageData } from "./$types";
   import About from "./about.svelte";
   import Projects from "./projects.svelte";
+	import Skills from "./skills.svelte";
+
+  export let data: PageData;
+  export let projects: Post[];
+
+  $: projects = data.projectPosts;
 </script>
 
 <svelte:head>
@@ -10,11 +18,8 @@
 
 <div class="container">
   <About />
-    <Projects />
-  <section>
-    <h2>My name is</h2>
-    <p>My name is</p>
-  </section>
+    <Projects projects={projects}/>
+  <Skills />
 </div>
 
 <style>

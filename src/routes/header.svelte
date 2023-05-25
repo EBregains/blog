@@ -103,17 +103,18 @@
 
   .title {
     margin-block: var(--size-2);
-    border: solid var(--border-size-1) var(--gray-5);
     border-radius: var(--radius-blob-5);
-    padding: var(--size-3);
-    background: var(--text-1);
-    /* background: linear-gradient(45deg, var(--primary-dark), var(--secondary)); */
-    color: var(--surface-1);
-    font-size: var(--font-size-fluid-1);
+    padding: var(--size-fluid-2);
+    border: var(--border-size-1) solid var(--gray-5);
+    /* background: var(--text-1); */
+/*
+    background: linear-gradient(to bottom,var(--secondary), var(--primary)); 
+*/
+    color: var(--text-1);
+    font-size: var(--size-fluid-2);
     width: fit-content;
   }
   .title:hover{
-    color: var(--surface-1);
     animation: logo-on-hover 2s ease-in-out infinite;
   }
 
@@ -122,7 +123,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-inline: var(--size-3);
     }
     .wrapper {
       display: none;

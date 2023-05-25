@@ -1,4 +1,4 @@
-export type Categories = 'sveltekit' | 'svelte' | 'test' | 'thoughts' | 'other' | 'accessibility' | 'HTML' | 'entry-level'
+export type Categories = 'sveltekit' | 'svelte' | 'test' | 'thoughts' | 'other' | 'accessibility' | 'javascript' | 'HTML' | 'entry-level' | 'project';
 export type Post = {
   title: string,
   slug: string,

@@ -21,7 +21,7 @@
 
   <div class="tags">
     {#each data.meta.categories as category}
-      <a href={`/blog/categories/${category}`} class="surface-4">&num;{category}</a>
+      <a href={`/blog/categories/${category}`} class="surface-4">{category}</a>
     {/each}
   </div>
 

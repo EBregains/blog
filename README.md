@@ -19,7 +19,7 @@ Deployed on Vercel, the site is prerender and amazingly fast! It has theme switc
 
 
 - [ ] Add an about page
--- [ ] Add a projects page
+- [ ] Add a projects section
 - [ ] Add a contact page
 - [ ] Add a search bar  
 - [ ] Add a comment section

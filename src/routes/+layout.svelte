@@ -34,7 +34,6 @@
     margin-inline: auto;
     display: grid;
     grid-template-rows: auto 1fr auto;
-
     padding-inline: var(--size-9);
   }
 
@@ -43,6 +42,13 @@
     display: flex;
     height: 100%;
     width: 100%;
+
+  }
+
+  @media (max-width: 768px) {
+    .layout {
+      padding-inline: var(--size-7);
+    }
   }
 
 </style>
