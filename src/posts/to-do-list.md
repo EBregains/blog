@@ -1,5 +1,5 @@
 ---
-title: To Do List.
+title: To Do List
 description: First personal project I worked on. Learned about React and their hooks, DOM manipulation and project structures.
 date: '2023-05-24'
 categories:
@@ -10,7 +10,11 @@ categories:
 published: true
 ---
 
+---
+
 ## Table of Contents
+
+---
 
 ## Introduction
 

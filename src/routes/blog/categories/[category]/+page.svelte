@@ -30,12 +30,6 @@
 
 <style>
 
-  h2::before {
-    content: "#";
-    padding-right: var(--size-3);
-    color: var(--text-2);
-    font-weight: 100;
-  }
   section{
     margin-block: var(--size-7);
   }

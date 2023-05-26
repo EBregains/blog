@@ -9,7 +9,11 @@ categories:
 published: true
 ---
 
+---
+
 ## Table of Contents
+
+---
 
 ## The Ease of Getting Addicted 
 

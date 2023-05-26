@@ -18,7 +18,7 @@
 
 <div class="container">
   <About />
-    <Projects projects={projects}/>
+  <Projects projects={projects}/>
   <Skills />
 </div>
 
@@ -30,5 +30,12 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding-inline: var(--size-9);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-inline: 0;
+    }
   }
 </style>

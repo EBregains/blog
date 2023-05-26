@@ -80,6 +80,7 @@
     border-radius: var(--radius-2);
     box-shadow: var(--shadow-2);
     position: absolute;
+    right: 0;
     z-index: 1;
 
   }
@@ -106,11 +107,8 @@
     border-radius: var(--radius-blob-5);
     padding: var(--size-fluid-2);
     border: var(--border-size-1) solid var(--gray-5);
-    /* background: var(--text-1); */
-/*
-    background: linear-gradient(to bottom,var(--secondary), var(--primary)); 
-*/
-    color: var(--text-1);
+    background: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
+    color: var(--surface-1);
     font-size: var(--size-fluid-2);
     width: fit-content;
   }

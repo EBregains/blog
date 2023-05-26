@@ -13,6 +13,8 @@ published: true
 
 ## Table of Contents
 
+---
+
 ## Web Accessibility: Making Your Website Inclusive
 In today's digital age, creating websites that are accessible to all users is crucial. Web accessibility ensures that individuals with disabilities can navigate and interact with your website effectively. In this blog post, we will explore how you can enhance web accessibility by applying accessibility features to HTML tags.
 
