@@ -7,7 +7,7 @@ categories:
   - 'thoughts'
   - 'other'
 published: true
-image: 
+
 ---
 
 ---

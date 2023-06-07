@@ -7,7 +7,6 @@ categories:
   - 'HTML'
   - 'entry-level'
 published: true
-image: /src/posts/accesibility-and-web-dev/image.png
 ---
 
 ---
