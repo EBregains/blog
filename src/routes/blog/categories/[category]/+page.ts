@@ -6,7 +6,6 @@ export async function load({params, fetch}:any) {
   console.log(posts);
   
   const filteredPosts = posts.filter(post => post.categories.includes(params.category));
-  console.log(filteredPosts);
   
   return { filteredPosts };
 } 

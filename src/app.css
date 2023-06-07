@@ -9,24 +9,38 @@ html {
 	/* dark */
 	--brand-dark: var(--orange-3);
 	--text-1-dark: var(--gray-3);
-	--text-2-dark: var(--gray-5);
+	--text-2-dark: var(--gray-6);
 	--surface-1-dark: var(--gray-12);
 	--surface-2-dark: var(--gray-11);
 	--surface-3-dark: var(--gray-10);
 	--surface-4-dark: var(--gray-9);
+  --surface-5-dark: var(--gray-6);
+  --surface-6-dark: var(--gray-4);
 	--background-dark: var(--gradient-8);
 	--border-dark: var(--gray-9);
 
 	/* light */
 	--brand-light: var(--orange-10);
 	--text-1-light: var(--gray-8);
-	--text-2-light: var(--gray-7);
+	--text-2-light: var(--gray-6);
 	--surface-1-light: var(--gray-0);
 	--surface-2-light: var(--gray-1);
 	--surface-3-light: var(--gray-2);
 	--surface-4-light: var(--gray-3);
-	--background-light: none;
+  --surface-5-light: var(--gray-6);
+  --surface-6-light: var(--gray-8);
+	--background-light: var(--surface-1);
 	--border-light: var(--gray-4);
+
+  /* colors */
+  --secondary-light: var(--violet-3);
+  --secondary: var(--purple-3);
+  --secondary-dark: var(--purple-3);
+  --primary-light: var(--violet-3);
+  --primary: var(--violet-5);
+  --primary-dark: var(--violet-7);
+
+  --linear-gradient-1: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
 }
 
 :root {
@@ -35,10 +49,13 @@ html {
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
+  --text-inverted: var(--text-1-light);
 	--surface-1: var(--surface-1-dark);
 	--surface-2: var(--surface-2-dark);
 	--surface-3: var(--surface-3-dark);
 	--surface-4: var(--surface-4-dark);
+  --surface-5: var(--surface-5-dark);
+  --surface-6: var(--surface-6-dark);
 	--background: var(--background-dark);
 	--border: var(--border-dark);
 }
@@ -54,6 +71,8 @@ html {
 		--surface-2: var(--surface-2-light);
 		--surface-3: var(--surface-3-light);
 		--surface-4: var(--surface-4-light);
+    --surface-5: var(--surface-5-light);
+    --surface-6: var(--surface-6-light);
 		--background: var(--background-light);
 		--border: var(--border-light);
 	}
@@ -69,8 +88,11 @@ html {
 	--surface-2: var(--surface-2-dark);
 	--surface-3: var(--surface-3-dark);
 	--surface-4: var(--surface-4-dark);
+  --surface-5: var(--surface-5-dark);
+  --surface-6: var(--surface-6-dark);
 	--background: var(--background-dark);
 	--border: var(--border-dark);
+  
 }
 
 [color-scheme='light'] {
@@ -83,13 +105,17 @@ html {
 	--surface-2: var(--surface-2-light);
 	--surface-3: var(--surface-3-light);
 	--surface-4: var(--surface-4-light);
+  --surface-5: var(--surface-5-light);
+  --surface-6: var(--surface-6-light);
 	--background: var(--background-light);
 	--border: var(--border-light);
+
 }
 
 html,
 body {
 	height: 100%;
+  width: 100%;
 }
 
 html {
@@ -97,6 +123,33 @@ html {
 	accent-color: var(--link);
 	background-image: var(--background);
 	background-attachment: fixed;
+  overflow-x: hidden;
+}
+h2 {
+  font-size: var(--font-size-fluid-2);
+}
+h2::before {
+  content: "#";
+  padding-right: var(--size-3);
+  color: var(--text-2);
+  font-weight: 100;
+}
+
+hr {
+  margin-block: var(--size-fluid-3);
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--secondary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--secondary-dark);
+  text-decoration: none;
 }
 
 img {
@@ -111,6 +164,10 @@ ol {
 
 li {
 	padding-inline-start: 0;
+}
+
+path {
+  stroke: var(--text-1);
 }
 
 .surface-1 {
@@ -133,6 +190,10 @@ li {
 	color: var(--text-1);
 }
 
+.prose {
+  max-inline-size: var(--size-content-3);
+  margin-inline: auto;
+}
 .prose :is(h2, h3, h4, h5, h6) {
   margin-top: var(--size-8);
   margin-bottom: var(--size-3);
@@ -156,4 +217,49 @@ li {
   padding: var(--size-3);
   tab-size: 2;
   background: var(--surface-1);
+}
+
+.tags {
+  display: inline-block;
+  line-height: var(--size-8);
+  margin-block: var(--size-7);
+}
+
+.tags > * {
+  background: var(--surface-4);
+  color: var(--text-1);
+  padding: var(--size-2) var(--size-3);
+}
+
+.tags > *::before{
+  content: "#";
+  padding-right: var(--size-1);
+}
+
+.tags a {
+  color: var(--text-1);
+  margin-inline: var(--size-1);
+  text-decoration: none;
+}
+
+.tags a:hover {
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--surface-);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
 }

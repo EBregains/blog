@@ -19,7 +19,7 @@
     tabindex="0"
     class:selected = {active}
   ></div>
-  <ul class="links" class:active>
+  <ol class="links" class:active>
     <li>
       <a on:click={() => active = !active} href="/about">About</a>
     </li>
@@ -32,7 +32,7 @@
     <li>
       <a on:click={() => active = !active} href="/rss.xml" target="_blank">RSS</a>
     </li>
-  </ul>
+  </ol>
   </div>
   <div class="toggle">
     <Toggle />
@@ -41,9 +41,9 @@
 
 <style>
   nav {
-    padding-block: var(--size-3);
+    padding-block: var(--size-2);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'title toggle links';
     align-items: center;
     justify-items: center;
@@ -56,18 +56,21 @@
     grid-area: links;
   }
   .wrapper:hover {
-    background: var(--surface-4);
+    background: var(--surface-2);
   }
   .wrapper::before{
     margin: 7px;
     content: '☰';
   }
   .selected {
-    background: var(--surface-3);
+    background: none;
+  }
+  .selected:hover {
+    background: none;
   }
   .selected::before {
-    content: 'X';
-    margin: 10px;
+    content: '✖';
+    margin: 8px;
   }
   .links {
     visibility: hidden;
@@ -75,9 +78,11 @@
     margin-block: var(--size-2);
     background-color: var(--surface-4);
     border-radius: var(--radius-2);
-    box-shadow: var(--shadow-1) var(--gray-5);
+    box-shadow: var(--shadow-2);
     position: absolute;
+    right: 0;
     z-index: 1;
+
   }
   li {
     padding: var(--size-1);
@@ -87,10 +92,11 @@
     padding: var(--size-3);
     background: var(--surface-4);
   }
-  a {
-    color: inherit;
+  li a, a:hover {
+    color: var(--text-1);
     text-decoration: none;
   }
+
   .toggle {
     grid-area: toggle;
     justify-self: center;
@@ -99,15 +105,16 @@
   .title {
     margin-block: var(--size-2);
     border-radius: var(--radius-blob-5);
-    border: var(--border-size-1) solid var(--gray-1);
-    padding: var(--size-3);
-    background: linear-gradient(to bottom, var(--purple-3), var(--violet-3), var(--indigo-3), var(--cyan-3));
+    padding: var(--size-fluid-2);
+    border: var(--border-size-1) solid var(--gray-5);
+    background: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
     color: var(--surface-1);
-    font-size: var(--font-size-fluid-1);
+    font-size: var(--size-fluid-2);
     width: fit-content;
   }
-  .title:hover {
-    animation: logo-on-hover 2s infinite;
+  .title:hover{
+    color: var(--surface-1);
+    animation: logo-on-hover 2s ease-in-out infinite;
   }
 
   @media (min-width: 768px) {
@@ -115,6 +122,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
     }
     .wrapper {
       display: none;
@@ -125,6 +133,7 @@
       background: none;
       position: relative;
       gap: var(--size-7);
+      box-shadow: none;
     }
   }
 

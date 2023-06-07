@@ -6,6 +6,7 @@
   export let data: PageData;
   console.log(data);
   
+  
 </script>
 
 <svelte:head>
@@ -15,17 +16,19 @@
 </svelte:head>
 
 <article>
-  <hgroup>
-    <h1>{data.meta.title}</h1>
-    <p>Published at {formatDate(data.meta.date)}</p>
-  </hgroup>
+  <img src={data.meta.image} alt={data.meta.title}/>
+  <div class='title'>
+    <hgroup>
+      <h1>{data.meta.title}</h1>
+      <p>Published at {formatDate(data.meta.date)}</p>
+    </hgroup>
 
-  <div class="tags">
-    {#each data.meta.categories as category}
-      <a href={`/blog/categories/${category}`} class="surface-4">&num;{category}</a>
-    {/each}
+    <div class="tags">
+      {#each data.meta.categories as category}
+        <a href={`/blog/categories/${category}`} class="surface-4">{category}</a>
+      {/each}
+    </div>
   </div>
-
   <div class="prose">
     <svelte:component this={data.content}/>
   </div>
@@ -33,26 +36,53 @@
 
 <style>
   article {
-    max-inline-size: var(--size-content-3);
+    display: grid;
+    place-items: center;
+    grid-template-areas: 'image title'
+                         'prose prose';
     margin-inline: auto;
+    margin-top: var(--size-9);
   }
 
+  img {
+    grid-area: image;
+    width: var(--size-fluid-8);
+    max-inline-size: var(--size-content-2);
+    border-radius: var(--radius-blob-5);
+  }
   h1 {
     text-transform: capitalize;
   }
 
   h1 + p {
-    margin-top: var(--size-2);
+    margin-top: var(--size-1);
     color: var(--text-2);
   }
 
-  .tags {
-    display: flex;
-    gap: var(--size-3);
-    margin-top: var(--size-7);
+  .prose {
+    grid-area: prose;
   }
 
-  .tags > * {
-    padding: var(--size-2) var(--size-3);
+  .title {
+    grid-area: title;
+    justify-self: start;
+  }
+
+  @media (max-width: 768px) {
+    article { 
+      grid-template-areas: 'image'
+                           'title'
+                           'prose';
+      flex-direction: column;
+    }
+
+    img {
+      max-inline-size: 80%;
+      border-radius: 0;
+    }
+
+    .title {
+      justify-self: center;
+    }
   }
 </style>

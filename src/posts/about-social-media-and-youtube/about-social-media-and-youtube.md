@@ -7,9 +7,14 @@ categories:
   - 'thoughts'
   - 'other'
 published: true
+
+---
+
 ---
 
 ## Table of Contents
+
+---
 
 ## The Ease of Getting Addicted 
 
@@ -35,6 +40,6 @@ Another way to avoid addiction is to be mindful of the content you consume. Try 
 
 Finally, it's important to cultivate other interests and hobbies. Finding activities that you enjoy can help reduce your dependence on social media and YouTube and provide a healthy outlet for your energy and attention.
 
-### Conclusion
+## Conclusion
 
 While social media and YouTube can be addictive, it's essential to remember that addiction is not inevitable. By being mindful of our usage and setting limits, we can enjoy the benefits of these platforms without the negative consequences of addiction.

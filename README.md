@@ -18,11 +18,12 @@ Deployed on Vercel, the site is prerender and amazingly fast! It has theme switc
 ## Next Steps
 
 
-- [ ] Add an about page
--- [ ] Add a projects page
+- [ ] Add an about page (currently working on)
+- [ ] Add a projects section
 - [ ] Add a contact page
 - [ ] Add a search bar  
 - [ ] Add a comment section
+- [ ] Finish footer
 
 
 - [ ] Keep writing posts

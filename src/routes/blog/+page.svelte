@@ -4,7 +4,6 @@
 	import { formatDate } from "$lib/utils";
 
   export let data: PageData;
-  console.log(data);
   
 </script>
 
@@ -13,6 +12,7 @@
 </svelte:head>
 
 <section>
+  <h2>Latest</h2>
   <ul class="posts">
     {#each data.posts as post}
       <li class='post'>
@@ -25,9 +25,28 @@
 </section>
 
 <style>
+
+  section {
+    width: fit-content;
+    margin-inline: auto;
+    margin-block: var(--size-7);
+  }
+  h2 {
+    padding-bottom: var(--size-7);
+    margin-bottom: var(--size-7);
+    border-bottom: var(--border-size-1) solid var(--border);
+    font-size: var(--font-size-fluid-3);
+  }
+  h2::before { 
+    content: "#";
+    padding-right: var(--size-3);
+    color: var(--text-2);
+    font-weight: 100;
+  }
   .posts {
     display: grid;
-    gap: var(--size-7);   
+    gap: var(--size-5); 
+    max-inline-size: var(--size-content-3)  
   }
 
   .post {
@@ -36,11 +55,11 @@
 
   .post:not(:last-child) {
     border-bottom: 1px solid var(--border);
-    padding-bottom: var(--size-7);
+    padding-bottom: var(--size-6);
   }
 
   .title {
-    font-size: var(--font-size-fluid-3);
+    font-size: var(--font-size-fluid-2);
     text-transform: capitalize;
   }
 
