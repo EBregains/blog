@@ -1,12 +1,14 @@
 ---
-title: Blog / Porfolio
-description: Intriguished by Svelte and Svelte kit and fining myself in the needence of a space to show my space, I made this as my first Svelte big project.
+title: Blog / Portfolio
+description: Intriguished by Svelte and SvelteKit and finding myself in the needence of a space to show my space, I made this as my first Svelte big project.
 date: '2023-05-26'
 categories:
   - 'project'
   - 'svelte'
   - 'sveltekit'
 published: true
+website: https://ebregains.vercel.app/
+repository: https://github.com/EBregains/blog
 ---
 
 ---

@@ -39,13 +39,16 @@
 
   main {
     padding-bottom: var(--size-9);
-    display: flex;
+    display: inline-block;
     height: 100%;
     width: 100%;
   }
 
   @media (max-width: 768px) {
     .layout {
+      padding-inline: 0;
+    }
+    main {
       padding-inline: var(--size-7);
     }
   }

@@ -41,7 +41,7 @@
 
 <style>
   nav {
-    padding-top: var(--size-3);
+    padding-block: var(--size-2);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 'title toggle links';
@@ -113,6 +113,7 @@
     width: fit-content;
   }
   .title:hover{
+    color: var(--surface-1);
     animation: logo-on-hover 2s ease-in-out infinite;
   }
 
@@ -121,6 +122,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
     }
     .wrapper {
       display: none;

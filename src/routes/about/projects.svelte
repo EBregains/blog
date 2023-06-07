@@ -8,16 +8,9 @@
 
 <section id="projects" >
   <div class="blob">
-    <svg xmlns="http://www.w3.org/2000/svg"
-    width="1500" height="1500"
-    viewBox="0 0 100 100">
- <path id="blob-1"
-       in:draw={{duration: 2000}}
-       fill="none" stroke="white" stroke-width="0.1"
-       d={blob1} />
-</svg>
+    
   </div>
-  <div class="projects-container" in:fly={{x:200}}>
+  <div class="projects-container" in:fly={{x:200, delay:1000}}>
     <h2>Projects</h2>
     <div class="tags">
       <a href="#projects">svelte</a>
@@ -26,8 +19,8 @@
     </div>
     <ol>
       {#each projects as project}
-        <li>
-          <a href={`/blog/post/${project.slug}`}>
+        <li class="project">
+          <a href={`/blog/post/${project.slug}`} target="_blank">
             {project.title}
           </a>
         </li>
@@ -43,9 +36,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    place-items: center;
+    place-items: start;
     height: 700px;
-    margin-block: var(--size-4);
+    padding-block: var(--size-fluid-4);
   }
   .projects-container {
     display: flex;
@@ -58,22 +51,49 @@
   }
   .projects-container ol {
     display: flex;
+    gap: var(--size-2);
     flex-direction: column;
+    align-items: center;
     width: 100%;
     margin-block: var(--size-2);
     overflow-y: auto;
   }
-  .projects-container ol li {
+  .project {
     width: 100%;
-    padding-bottom: var(--size-7);
+
+    padding-block: var(--size-2);
     padding-inline: var(--size-7);
-    margin-bottom: var(--size-7);
-    border-bottom: var(--border-size-1) solid var(--border);
+    background: var(--surface-3);
     font-size: var(--font-size-fluid-1);
-    color: var(--secondary);
   }
 
-  @media (max-width: 768px) {
+  .project::before {
+    content: "> ";
+    font-weight: bold;
+    background: var(--linear-gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .project:hover {
+      animation: project-hover .3s ease-out forwards;
+  }
+
+  .project a {
+    color: var(--text-1);
+  }
+
+  .blob {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--surface-5);
+    border-radius: var(--radius-blob-3);
+
+  }
+  @media (max-width: 1024px) {
     section {
       width: 100%;
       display: flex;
@@ -81,27 +101,54 @@
       align-items: center;
       height: auto;
       background: var(--surface-3);
+      border-radius: var(--radius-3);
     }
     .projects-container {
       width: 100%;
-      padding-inline: var(--size-4);
-      padding-block: var(--size-9);
+      align-items: center;
+      padding-inline: var(--size-fluid-4);
+      padding-top: var(--size-fluid-2);
+      padding-bottom: 0;
     }
     .projects-container ol {
       display: inline-flex;
-      background: var(--surface-2);;
       height: 100%;
       margin-block: var(--size-3);
-      overflow-y: auto;
-      overflow-x: scroll;
+
     }
-    .projects-container ol li {
-      border-radius: var(--border-blob-1);
+    .project {
+      display: flex;
       width: 100%;
-      height: 300px;
+      height: 200px;
+
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-3);
+      background: var(--surface-2);
+      text-transform: uppercase;
+      font-size: var(--font-size-fluid-3);
+      font-weight: bold;
+    }
+
+    .project a{
+      color: var(--surface-5);
+    }
+    .project::before {
+      content: "";
     }
     .blob {
       display: none;
+    }
+  }
+
+  @keyframes project-hover {
+    0% {
+      
+    }
+    100% {
+      background: var(--surface-4);
+      padding-left: var(--size-8);
     }
   }
 

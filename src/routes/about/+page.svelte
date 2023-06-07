@@ -9,6 +9,8 @@
   export let data: PageData;
   export let projects: Post[];
 
+  let treshold = 0.5;
+
   $: projects = data.projectPosts;
 </script>
 
@@ -16,11 +18,11 @@
   <title>{config.title} | About</title>
 </svelte:head>
 
-<div class="container">
-  <About />
-  <Projects projects={projects}/>
-  <Skills />
-</div>
+  <div class="container">
+    <About />
+    <Projects projects={projects}/>
+    <Skills />
+  </div>
 
 <style>
   .container { 
@@ -33,7 +35,7 @@
     padding-inline: var(--size-9);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .container {
       padding-inline: 0;
     }

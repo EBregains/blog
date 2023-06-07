@@ -1,5 +1,5 @@
 ---
-title: Accessibility and Web Dev.
+title: Accessibility and Web Dev
 description: A topic I find really interesting and that we all should add to our skills tree.
 date: '2023-05-17'
 categories:
@@ -7,6 +7,7 @@ categories:
   - 'HTML'
   - 'entry-level'
 published: true
+image: /src/posts/accesibility-and-web-dev/image.png
 ---
 
 ---

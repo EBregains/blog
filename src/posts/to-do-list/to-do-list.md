@@ -8,6 +8,9 @@ categories:
   - 'javascript'
   - 'entry-level'
 published: true
+image: /src/posts/to-do-list/image.png
+website: https://ebregains.github.io/get-things-done/
+repository: https://github.com/EBregains/get-things-done
 ---
 
 ---

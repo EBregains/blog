@@ -2,10 +2,6 @@
 
 </script>
 
-<svelte:head>
-  <title>Skills</title>
-</svelte:head>
-
 <section id="skills">
   <h2>Skills</h2>
 </section>

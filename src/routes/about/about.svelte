@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fly, draw } from "svelte/transition";
+  import { fly, draw, fade } from "svelte/transition";
 	import type { PageData } from "../$types";
   import { blob1 } from "$lib/blobs";
 
@@ -17,16 +17,8 @@
       <a href="#projects">projects</a>
     </div>
   </div>
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg"
-    width="400" height="400"
-    viewBox="0 0 90 90">
-      <path id="blob-1"
-        in:draw={{duration: 2000}}
-        fill="none" stroke="white" stroke-width="0.1"
-        d={blob1} 
-      />
-    </svg>
+  <div class="blob" in:fade={{duration: 1000}}> 
+
   </div>
 </section>
 
@@ -36,12 +28,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
+    text-align: center;
     height: 510px;
     padding-inline: var(--size-9);
-  }
-
-  path {
-    stroke: var(--text-1);
   }
   
   h2 {
@@ -49,7 +38,7 @@
   }
   h1 {
     font-size: var(--font-size-fluid-3);
-    background: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
+    background: var(--linear-gradient-1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -57,7 +46,23 @@
   hgroup {
     padding-block: var(--size-2);
   }
-  @media (max-width: 768px) {
+  .blob {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--surface-5);
+    border-radius: var(--radius-blob-5);
+    background: url('/profile-pic.jpg') no-repeat center center;
+    background-size: cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(60%);
+  }
+  .blob:hover {
+    animation: grayscale-fade 1s linear forwards;
+  }
+  @media (max-width: 1024px) {
     section {
       display: flex;
       flex-direction: column-reverse;
@@ -76,6 +81,20 @@
     div .tags {
       display: inline-block;
     }
+    .blob {
+      width: 260px;
+      height: 260px;
+    }
   }
 
+  @keyframes grayscale-fade {
+    0% {
+      -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(60%);
+    }
+    100% {
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+    }
+  }
 </style>

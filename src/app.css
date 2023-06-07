@@ -33,15 +33,14 @@ html {
 	--border-light: var(--gray-4);
 
   /* colors */
-  --secondary-light: var(--cyan-3);
-  --secondary: var(--cyan-5);
-  --secondary-dark: var(--cyan-7);
+  --secondary-light: var(--violet-3);
+  --secondary: var(--purple-3);
+  --secondary-dark: var(--purple-3);
   --primary-light: var(--violet-3);
   --primary: var(--violet-5);
   --primary-dark: var(--violet-7);
-  --tertiary-light: var(--green-1);
-  --tertiary: var(--green-4);
-  --tertiary-dark: var(--green-7);
+
+  --linear-gradient-1: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
 }
 
 :root {
@@ -136,12 +135,16 @@ h2::before {
   font-weight: 100;
 }
 
+hr {
+  margin-block: var(--size-fluid-3);
+}
+
 a {
-  color: var(--secondary-light);
+  color: var(--brand);
   text-decoration: none;
 }
 a:visited {
-  color: var(--secondary-light);
+  color: var(--secondary);
   text-decoration: none;
 }
 a:hover {
@@ -187,6 +190,10 @@ path {
 	color: var(--text-1);
 }
 
+.prose {
+  max-inline-size: var(--size-content-3);
+  margin-inline: auto;
+}
 .prose :is(h2, h3, h4, h5, h6) {
   margin-top: var(--size-8);
   margin-bottom: var(--size-3);
