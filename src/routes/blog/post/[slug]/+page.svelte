@@ -16,7 +16,7 @@
 </svelte:head>
 
 <article>
-  <img src={data.meta.image} alt={data.meta.title}/>
+  <!-- <img src={data.meta.image} alt={data.meta.title}/> -->
   <div class='title'>
     <hgroup>
       <h1>{data.meta.title}</h1>
