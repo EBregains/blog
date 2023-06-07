@@ -89,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2px var(--surface-5);
+    border: solid 1px var(--surface-5);
     border-radius: var(--radius-blob-3);
 
   }
