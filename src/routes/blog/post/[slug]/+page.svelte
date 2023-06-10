@@ -16,7 +16,7 @@
 </svelte:head>
 
 <article>
-  <!-- <img src={data.meta.image} alt={data.meta.title}/> -->
+  <img src={data.profile} alt={data.meta.title}/>
   <div class='title'>
     <hgroup>
       <h1>{data.meta.title}</h1>
@@ -46,8 +46,7 @@
 
   img {
     grid-area: image;
-    width: var(--size-fluid-8);
-    max-inline-size: var(--size-content-2);
+    width: var(--size-fluid-9);
     border-radius: var(--radius-blob-5);
   }
   h1 {
@@ -64,6 +63,7 @@
   }
 
   .title {
+    padding-left: var(--size-5);
     grid-area: title;
     justify-self: start;
   }
@@ -77,12 +77,21 @@
     }
 
     img {
-      max-inline-size: 80%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      top: var(--size-fluid-6);
+      left: 0;
+      width: 100vw;
+      max-height: var(--size-fluid-10);
       border-radius: 0;
     }
 
     .title {
       justify-self: center;
+      margin-top: var(--size-fluid-9);
+      padding-top: var(--size-fluid-5);
+
     }
   }
 </style>

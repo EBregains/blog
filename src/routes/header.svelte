@@ -47,6 +47,8 @@
     grid-template-areas: 'title toggle links';
     align-items: center;
     justify-items: center;
+    background: var(--surface-1);
+    border-bottom: var(--border-size-1) solid var(--gray-7);
   }
   .wrapper {
     border: solid var(--border-size-1) var(--gray-5);

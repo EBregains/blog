@@ -134,7 +134,9 @@ h2::before {
   color: var(--text-2);
   font-weight: 100;
 }
-
+h3 {
+  font-size: var(--font-size-fluid-1);
+}
 hr {
   margin-block: var(--size-fluid-3);
 }

@@ -25,7 +25,7 @@ This space was created to show my projects and my blog posts. I wanted to create
 
 The project was a simple blog/portfolio that allowed the user to see my projects and my blog posts. The posts will be created around markdown syntax and storage in the same repo. The markdown accepts code snippets and images. Also I wanted to add an "About" and "Contact" section, and links to my social media.
 
-## The Technologies
+### The Technologies
 
 The project was created using Svelte and Svelte kit. I used OpenProps for the styling and my own svgs to make it more mine. Git and Github were used for version control and deployment. Currently deployed in Vercel and builded with Svelte Vercel Adapter. 
 
