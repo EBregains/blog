@@ -51,6 +51,7 @@
   }
   h1 {
     text-transform: capitalize;
+    word-wrap: normal;
   }
 
   h1 + p {
@@ -58,7 +59,14 @@
     color: var(--text-2);
   }
 
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 100%;
+  }
   .prose {
+    box-sizing: border-box;
     grid-area: prose;
   }
 
@@ -70,10 +78,10 @@
 
   @media (max-width: 768px) {
     article { 
-        grid-template-areas: 'image'
-                            'title'
-                            'prose';
+      display: flex;
       flex-direction: column;
+      width: 100%;
+      padding-left: var(--size-1);
     }
 
     img {
@@ -88,10 +96,12 @@
     }
 
     .title {
-      justify-self: center;
+      display: block;
       margin-top: var(--size-fluid-9);
       padding-top: var(--size-fluid-5);
-
+      padding-inline: 0;
+      width: 100%;
+      overflow-x: hidden;
     }
   }
 </style>

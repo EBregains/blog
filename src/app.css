@@ -215,7 +215,9 @@ path {
 }
 
 .prose pre {
-  max-inline-size: 100%;
+  display: block;
+  overflow-x: scroll;
+  white-space: break-spaces;
   padding: var(--size-3);
   tab-size: 2;
   background: var(--surface-1);
