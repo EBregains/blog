@@ -223,11 +223,14 @@ path {
 
 .tags {
   display: inline-block;
-  line-height: var(--size-8);
+  max-width: 100%;
+  line-height: var(--size-7);
   margin-block: var(--size-7);
 }
 
 .tags > * {
+  display: inline-block;
+  margin-bottom: var(--size-3);
   background: var(--surface-4);
   color: var(--text-1);
   padding: var(--size-2) var(--size-3);

@@ -70,9 +70,9 @@
 
   @media (max-width: 768px) {
     article { 
-      grid-template-areas: 'image'
-                           'title'
-                           'prose';
+        grid-template-areas: 'image'
+                            'title'
+                            'prose';
       flex-direction: column;
     }
 
@@ -82,7 +82,7 @@
       z-index: -1;
       top: var(--size-fluid-6);
       left: 0;
-      width: 100vw;
+      width: 100%;
       max-height: var(--size-fluid-10);
       border-radius: 0;
     }
