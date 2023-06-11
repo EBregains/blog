@@ -124,7 +124,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      background: none;
+      border-bottom: none;
     }
     .wrapper {
       display: none;
