@@ -58,9 +58,8 @@
     background-size: cover;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(60%);
-  }
-  .blob:hover {
     animation: grayscale-fade 1s linear forwards;
+
   }
   @media (max-width: 1024px) {
     section {

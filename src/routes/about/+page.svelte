@@ -9,8 +9,6 @@
   export let data: PageData;
   export let projects: Post[];
 
-  let treshold = 0.5;
-
   $: projects = data.projectPosts;
 </script>
 

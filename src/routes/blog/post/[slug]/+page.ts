@@ -6,7 +6,6 @@ export async function load({params}: Parameters) {
   try {
     const post = await import(`../../../../posts/${params.slug}/${params.slug}.md`);
     const image = await import(`../../../../posts/${params.slug}/images/profile.webp`);
-    console.log(image);
     
     return {
       status: 200,

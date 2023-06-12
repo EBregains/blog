@@ -6,6 +6,11 @@ export const load: PageLoad = async ({fetch}) => {
   const posts : Post[] = await response.json();
   const projectPosts = posts.filter(post => 
     post.categories.includes('project'))
-
+  for (const post of projectPosts) {
+    const image = await import(`../../posts/${post.slug}/images/profile.webp`);
+    post.image = image.default;
+  }
+  console.log(projectPosts);
+  
   return { projectPosts };
 };

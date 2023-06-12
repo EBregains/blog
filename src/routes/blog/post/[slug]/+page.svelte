@@ -4,7 +4,6 @@
   import type { PageData } from "./$types";
 
   export let data: PageData;
-  console.log(data);
   
   
 </script>
@@ -47,6 +46,8 @@
   img {
     grid-area: image;
     width: var(--size-fluid-9);
+    height: var(--size-fluid-9);
+    object-fit: cover;
     border-radius: var(--radius-blob-5);
   }
   h1 {
@@ -98,7 +99,6 @@
     .title {
       display: block;
       margin-top: var(--size-fluid-9);
-      padding-top: var(--size-fluid-5);
       padding-inline: 0;
       width: 100%;
       overflow-x: hidden;

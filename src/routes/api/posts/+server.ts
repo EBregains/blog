@@ -9,10 +9,12 @@ async function getPosts() {
 
   for (const path in paths) {
     const file = paths[path];
+    
     const slug = path.split("/").pop()?.replace(".md", "");
     if (file && slug && typeof file === "object" && 'metadata' in file) {
       const metadata = file.metadata as Omit<Post, "slug">;
       const post = { ...metadata, slug } satisfies Post;  
+
       post.published && posts.push(post);
     }
   }
@@ -20,8 +22,11 @@ async function getPosts() {
   posts = posts.sort(
     (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
   );
+  console.log(posts);
   
   return posts;
+
+  
 }
 
 export const GET: RequestHandler = async ({url}) => {
