@@ -40,7 +40,7 @@ html {
   --primary: var(--violet-5);
   --primary-dark: var(--violet-7);
 
-  --linear-gradient-1: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
+  --linear-gradient-1: linear-gradient(to bottom,var(--purple-4),var(--violet-4),var(--indigo-4),var(--cyan-4));
 }
 
 :root {

@@ -1,8 +1,11 @@
 <script lang="ts">
   import * as config from '$lib/config'
 	import Toggle from './toggle.svelte';
+  import { page } from '$app/stores';
   
   let active = false;
+
+  $: routeId = $page.route.id;
 </script>
 
 <nav>
@@ -21,16 +24,24 @@
   ></div>
   <ol class="links" class:active>
     <li>
-      <a on:click={() => active = !active} href="/about">About</a>
+      <a on:click={() => active = !active}
+        class:current = {routeId === '/about'} 
+        href="/about">About</a>
     </li>
     <li>
-      <a on:click={() => active = !active} href="/blog">Blog</a>
+      <a on:click={() => active = !active}
+        class:current = {routeId?.includes('/blog')}
+        href="/blog">Blog</a>
     </li>
     <li>
-      <a on:click={() => active = !active} href="/contact">Contact</a>
+      <a on:click={() => active = !active} 
+        class:current = {routeId === '/contact'}
+        href="/contact">Contact</a>
     </li>
     <li>
-      <a on:click={() => active = !active} href="/rss.xml" target="_blank">RSS</a>
+      <a on:click={() => active = !active} 
+        class:current = {routeId === '/rss.xml'}
+        href="/rss.xml" target="_blank">RSS</a>
     </li>
   </ol>
   </div>
@@ -109,14 +120,17 @@
     border-radius: var(--radius-blob-5);
     padding: var(--size-fluid-2);
     border: var(--border-size-1) solid var(--gray-5);
-    background: linear-gradient(to bottom,var(--purple-3),var(--violet-3),var(--indigo-3),var(--cyan-3));
+    background: var(--linear-gradient-1);
     color: var(--surface-1);
     font-size: var(--size-fluid-2);
     width: fit-content;
   }
   .title:hover{
     color: var(--surface-1);
-    animation: logo-on-hover 2s ease-in-out infinite;
+    animation: logo-on-hover 2s linear infinite;
+  }
+  .current{
+    border-bottom: 2px solid var(--text-2);
   }
 
   @media (min-width: 768px) {

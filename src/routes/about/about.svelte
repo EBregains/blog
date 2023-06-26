@@ -11,14 +11,14 @@
       <h2>Hi! I am</h2>
       <h1>Emiliano</h1>
     </hgroup>
-    <p>And welcome to my WIP webpage.</p>
+    <p>And welcome to my place.</p>
     <div class="tags">
       <a href="#skills">skills</a>
       <a href="#projects">projects</a>
     </div>
   </div>
-  <div class="blob" in:fade={{duration: 1000}}> 
-
+  <div class="blob" in:fade={{duration: 1000}} > 
+    <img src="/profile-pic.jpg" alt="Emi posing" loading="lazy">
   </div>
 </section>
 
@@ -46,6 +46,13 @@
   hgroup {
     padding-block: var(--size-2);
   }
+  img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-blob-5);
+
+  }
   .blob {
     width: 90%;
     height: 90%;
@@ -54,12 +61,10 @@
     align-items: center;
     border: solid 1px var(--surface-5);
     border-radius: var(--radius-blob-5);
-    background: url('/profile-pic.jpg') no-repeat center center;
-    background-size: cover;
+    justify-self: start;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(60%);
     animation: grayscale-fade 1s linear forwards;
-
   }
   @media (max-width: 1024px) {
     section {

@@ -27,6 +27,13 @@
         <a href={`/blog/categories/${category}`} class="surface-4">{category}</a>
       {/each}
     </div>
+
+    <!-- {#if data.meta.repository}
+      <a href={data.meta.repository} target="_blank">
+        <img class="logo" src="/github-mark.png" alt="github logo">
+        <p>Repository</p>
+      </a>
+    {/if} -->
   </div>
   <div class="prose">
     <svelte:component this={data.content}/>
@@ -77,6 +84,12 @@
     justify-self: start;
   }
 
+  .logo {
+      width: var(--size-fluid-5);
+      height: var(--size-fluid-5);
+      margin-top: var(--size-1);
+    }
+  
   @media (max-width: 768px) {
     article { 
       display: flex;
@@ -85,7 +98,7 @@
       padding-left: var(--size-1);
     }
 
-    img {
+    article > img {
       object-fit: cover;
       position: absolute;
       z-index: -1;
@@ -94,7 +107,9 @@
       width: 100%;
       max-height: var(--size-fluid-10);
       border-radius: 0;
+      border: none;
     }
+
 
     .title {
       display: block;

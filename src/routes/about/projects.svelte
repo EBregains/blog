@@ -1,37 +1,39 @@
 <script lang='ts'>
-  import { fly, draw } from "svelte/transition";
+  import { fly, draw, fade } from "svelte/transition";
 	import type { Post } from "$lib/types";
-  import { sineInOut } from "svelte/easing";
+  import { sineOut } from "svelte/easing";
 
   export let projects: Post[];
+  let hoveredProject: Post | null = null;
+
+   
+  
 </script>
 
 <section id="projects" >
   <div class="blob">
+    {#if hoveredProject}
+      <img 
+        in:fade={{duration: 1000}}
+        src={hoveredProject.image} 
+        alt={hoveredProject.title} />
+    {:else}
     <svg 
       xmlns="http://www.w3.org/2000/svg"
       width="500" height="500"
       viewBox="0 0 1080 1080"
     >
       <path 
-        in:draw={{delay: 500, duration: 3000, easing: sineInOut}}
+        in:draw={{delay: 500, duration: 2000, easing: sineOut}}
         fill="none" stroke="black" stroke-width="7"
         d="M 547.00,669.00
           C 626.00,670.00 678.00,602.00 678.00,540.00
             678.00,478.00 627.00,401.00 545.00,402.00
             463.00,403.00 410.00,471.00 411.00,539.00
-            412.00,607.00 468.00,668.00 547.00,669.00 Z
-          M 543.00,1036.00
-          C 218.00,1036.00 39.00,760.00 43.00,536.00
-            47.00,312.00 213.00,35.00 555.00,35.00
-            897.00,35.00 1050.00,344.00 1046.00,559.00
-            1042.00,774.00 884.00,907.00 884.00,907.00
-            884.00,907.00 886.00,797.00 886.00,797.00
-            886.00,797.00 869.00,928.00 869.00,928.00
-            869.00,928.00 1011.00,878.00 1011.00,878.00" 
+            412.00,607.00 468.00,668.00 547.00,669.00 Z" 
       />
       <path 
-        in:draw={{delay: 500, duration: 4000, easing: sineInOut}}
+        in:draw={{delay: 500, duration: 3000, easing: sineOut}}
         id="wheel"
         fill="none" stroke="black" stroke-width="7"
         d="M 798.00,458.00
@@ -69,6 +71,7 @@
             866.00,459.00 798.00,458.00 798.00,458.00 Z"
       />
     </svg>
+    {/if}
   </div>
   <div class="projects-container" in:fly={{y:200, delay:500}}>
     <h2>Projects</h2>
@@ -79,10 +82,14 @@
     </div>
     <ol>
       {#each projects as project}
-        <li class="project">
-          <a href={`/blog/post/${project.slug}`} target="_blank">
-            {project.title}
-          </a>
+        <li 
+          class="project"
+          on:mouseenter={() => hoveredProject = project}
+          on:mouseleave={() => hoveredProject = null}
+        >
+            <a href={`/blog/post/${project.slug}`} target="_blank">
+              {project.title}
+            </a>
         </li>
       {/each}
     </ol>
@@ -149,15 +156,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20%;
     border: solid 1px var(--surface-5);
-    border-radius: var(--radius-blob-3);
+    border-radius: var(--radius-blob-5);
 
   }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-blob-5);
+  }
+  
   svg {
     width: 100%;
     height: 100%;
-    animation: rotate infinite;
+    animation: rotate 10s linear infinite;
   }
   @media (max-width: 1024px) {
     section {
