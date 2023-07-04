@@ -16,7 +16,8 @@
       <img 
         in:fade={{duration: 1000}}
         src={hoveredProject.image} 
-        alt={hoveredProject.title} />
+        alt={hoveredProject.title}
+        loading="lazy" />
     {:else}
     <svg 
       xmlns="http://www.w3.org/2000/svg"
