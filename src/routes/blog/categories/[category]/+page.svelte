@@ -14,7 +14,7 @@
 
 
 <h2>{category}</h2>
-<a href="/blog/categories"> &lt; Go to categories</a>
+<a href="/blog"> &lt; Go to latest posts</a>
 
 <section>
   <ul class="posts">

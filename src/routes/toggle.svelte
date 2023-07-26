@@ -5,31 +5,45 @@
 </script>
 
 <button on:click={toggleTheme} aria-label="Toggle theme">
-  {#if $theme === 'dark'}
-    <div in:fly={{ y: 10 }}>
+  {#if $theme === 'light'}
+    <div in:fly={{ x: 10 }} class="left bg-dark">
       <Sun size="24" />
-      <span> Go Light</span>
     </div>
   {:else}
-    <div in:fly={{y:-10}}>
-      <Moon size="24" />
-      <span> Go Dark</span>
+    <div in:fly={{x:-10}} class="right bg-light">
+      <Moon color="#FFF" size="24" />
     </div>
   {/if}
 </button>
 
 <style>
   button {
-    padding: 0;
+    padding: 4px;
+    width: 62px;
     font-weight: inherit;
     background: none;
-    border: none;
+    border: 1px solid var(--text-2);
     box-shadow: none;
     cursor: pointer;
+    border-radius: 24px;
     overflow: hidden;
   }
   button > * {
     display: flex;
     gap: var(--size-2);
+  }
+  div {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: var(--background-1);
+    border-radius: 50%;
+  }
+
+  .left {
+    transform: translateX(-12px);
+  }
+  .right {
+    transform: translateX(14px);
   }
 </style>

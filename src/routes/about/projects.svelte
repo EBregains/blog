@@ -157,9 +157,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px var(--surface-5);
+    /* border: solid 1px var(--surface-5);*/
+    border: none;
     border-radius: var(--radius-blob-5);
-
   }
   img {
     width: 100%;

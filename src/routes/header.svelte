@@ -54,7 +54,7 @@
   nav {
     padding-block: var(--size-2);
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'title toggle links';
     align-items: center;
     justify-items: center;
