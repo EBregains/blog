@@ -67,4 +67,8 @@
     color: var(--text-2);
     padding-bottom: var(--size-7);
   }
+
+  .description {
+    font-size: var(--font-size-3);
+  }
 </style>
