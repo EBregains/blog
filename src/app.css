@@ -29,7 +29,7 @@ html {
 	--surface-4-light: var(--gray-3);
   --surface-5-light: var(--gray-6);
   --surface-6-light: var(--gray-8);
-	--background-light: var(--surface-1);
+	--background-light: linear-gradient(30deg,var(--gray-0),var(--gray-1),var(--gray-2),var(--gray-3));
 	--border-light: var(--gray-4);
 
   /* colors */
@@ -170,6 +170,10 @@ li {
 
 path {
   stroke: var(--text-1);
+}
+
+textarea {
+  resize: none;
 }
 
 .surface-1 {

@@ -136,7 +136,7 @@
   @media (min-width: 768px) {
     nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       background: none;
       border-bottom: none;

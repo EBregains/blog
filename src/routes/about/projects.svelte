@@ -34,7 +34,7 @@
             412.00,607.00 468.00,668.00 547.00,669.00 Z" 
       />
       <path 
-        in:draw={{delay: 500, duration: 3000, easing: sineOut}}
+        in:draw={{delay: 500, duration: 2000, easing: sineOut}}
         id="wheel"
         fill="none" stroke="black" stroke-width="7"
         d="M 798.00,458.00
@@ -219,6 +219,9 @@
     }
     .blob {
       display: none;
+    }
+    svg {
+      display: block;
     }
   }
 

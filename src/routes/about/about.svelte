@@ -25,9 +25,11 @@
 <style>
   section {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
+    /* display: flex;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
     height: 510px;
     padding-inline: var(--size-9);
@@ -54,12 +56,12 @@
 
   }
   .blob {
-    width: 90%;
+    width: 40%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px var(--surface-5);
+    /* border: solid 1px var(--surface-5); */
     border-radius: var(--radius-blob-5);
     justify-self: start;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */

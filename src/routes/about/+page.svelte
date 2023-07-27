@@ -25,6 +25,8 @@
 <style>
   .container { 
     display: flex;
+    padding: 0;
+    margin: 0;
 
     width: 100%;
     align-items: center;

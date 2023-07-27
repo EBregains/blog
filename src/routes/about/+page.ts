@@ -12,7 +12,6 @@ export const load: PageLoad = async ({fetch}) => {
     const image = await import(`../../posts/${post.slug}/images/profile.webp`);
     post.image = image.default;
   }
-  console.log(projectPosts);
   
   return { projectPosts };
 };
