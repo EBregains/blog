@@ -1,6 +1,6 @@
 ## Link to the website
 
-[ebregains.vercel.app](ebregains.vercel.app)
+[ebregains.vercel.app](https://ebregains.vercel.app)
 
 # Personal Blog / Semi-Portfolio
 
