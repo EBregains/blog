@@ -1,3 +1,6 @@
+## Link to the website
+
+ebregains.vercel.app
 
 # Personal Blog / Semi-Portfolio
 
@@ -18,9 +21,10 @@ Deployed on Vercel, the site is prerender and amazingly fast! It has theme switc
 ## Next Steps
 
 
-- [ ] Add an about page (currently working on)
-- [ ] Add a projects section
-- [ ] Add a contact page
+- [x] Add an about page 
+- [x] Add a projects section
+- [x] Add a contact page
+- [ ] Add a skill section 
 - [ ] Add a search bar  
 - [ ] Add a comment section
 - [ ] Finish footer
