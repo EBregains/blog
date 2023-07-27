@@ -118,11 +118,11 @@
     padding-inline: var(--size-3);
   }
   .projects-container ol {
+    width: 80%;
     display: flex;
     gap: var(--size-2);
     flex-direction: column;
     align-items: center;
-    width: 100%;
     margin-block: var(--size-2);
     overflow-y: auto;
   }
