@@ -1,4 +1,3 @@
-
 # Personal Blog / Semi-Portfolio
 
 This is my personal blog, which I use to write about things I find interesting. It's also a semi-portfolio, where I showcase some of my projects.
@@ -17,14 +16,11 @@ Deployed on Vercel, the site is prerender and amazingly fast! It has theme switc
 
 ## Next Steps
 
-
 - [ ] Add an about page (currently working on)
 - [ ] Add a projects section
 - [ ] Add a contact page
-- [ ] Add a search bar  
+- [ ] Add a search bar
 - [ ] Add a comment section
 - [ ] Finish footer
 
-
 - [ ] Keep writing posts
-

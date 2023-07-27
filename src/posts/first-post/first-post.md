@@ -11,9 +11,9 @@ published: false
 
 ---
 
-## Markdown 
+## Markdown
 
-This is my first post. 
+This is my first post.
 
 ## Code
 
@@ -22,4 +22,5 @@ fuction greeting(name: string) {
   console.log(`Hello ${name}!`);
 }
 ```
+
 Bye!

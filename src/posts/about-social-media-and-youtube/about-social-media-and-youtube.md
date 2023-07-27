@@ -7,7 +7,6 @@ categories:
   - 'thoughts'
   - 'other'
 published: true
-
 ---
 
 ---
@@ -16,7 +15,7 @@ published: true
 
 ---
 
-## The Ease of Getting Addicted 
+## The Ease of Getting Addicted
 
 Social media and YouTube are two of the most popular online platforms today. They offer a vast array of content, from entertainment to educational and informative videos. While these platforms have their benefits, they also have their downsides. One of the most significant risks of using social media and YouTube is getting addicted to them.
 

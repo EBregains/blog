@@ -13,11 +13,13 @@ repository: https://github.com/EBregains/get-things-done
 ---
 
 ### Click [here](https://ebregains.github.io/get-things-done/) to the project.
+
 ---
 
 ## Table of Contents
 
 ---
+
 ## Introduction
 
 This is the first project I worked on. It was a simple to-do list that I made to learn about React and their hooks, DOM manipulation and project structures. I also learned about the importance of planning and how to structure a project.

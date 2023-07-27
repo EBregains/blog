@@ -19,7 +19,7 @@ repository: https://github.com/EBregains/blog
 
 ## Introduction
 
-This space was created to show my projects and my blog posts. I wanted to create a space where I could show myself as a developer. 
+This space was created to show my projects and my blog posts. I wanted to create a space where I could show myself as a developer.
 
 ## The Project
 
@@ -27,7 +27,4 @@ The project was a simple blog/portfolio that allowed the user to see my projects
 
 ### The Technologies
 
-The project was created using Svelte and Svelte kit. I used OpenProps for the styling and my own svgs to make it more mine. Git and Github were used for version control and deployment. Currently deployed in Vercel and builded with Svelte Vercel Adapter. 
-
-
-
+The project was created using Svelte and Svelte kit. I used OpenProps for the styling and my own svgs to make it more mine. Git and Github were used for version control and deployment. Currently deployed in Vercel and builded with Svelte Vercel Adapter.

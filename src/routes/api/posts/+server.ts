@@ -1,37 +1,34 @@
-import type { Categories, Post } from "$lib/types";
-import { json, type RequestHandler } from "@sveltejs/kit";
+import type { Categories, Post } from '$lib/types';
+import { json, type RequestHandler } from '@sveltejs/kit';
 
 async function getPosts() {
+	let posts: Post[] = [];
 
-  let posts: Post[] = []; 
+	const paths = import.meta.glob('/src/posts/*/*.md', { eager: true });
 
-  const paths = import.meta.glob("/src/posts/*/*.md", {eager: true});
+	for (const path in paths) {
+		const file = paths[path];
 
-  for (const path in paths) {
-    const file = paths[path];
-    
-    const slug = path.split("/").pop()?.replace(".md", "");
-    if (file && slug && typeof file === "object" && 'metadata' in file) {
-      const metadata = file.metadata as Omit<Post, "slug">;
-      const post = { ...metadata, slug } satisfies Post;  
+		const slug = path.split('/').pop()?.replace('.md', '');
+		if (file && slug && typeof file === 'object' && 'metadata' in file) {
+			const metadata = file.metadata as Omit<Post, 'slug'>;
+			const post = { ...metadata, slug } satisfies Post;
 
-      post.published && posts.push(post);
-    }
-  }
+			post.published && posts.push(post);
+		}
+	}
 
-  posts = posts.sort(
-    (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
-  );
-  console.log(posts);
-  
-  return posts;
+	posts = posts.sort(
+		(first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
+	);
+	console.log(posts);
 
-  
+	return posts;
 }
 
-export const GET: RequestHandler = async ({url}) => {
-  let posts: Post[];
-  posts = await getPosts();
+export const GET: RequestHandler = async ({ url }) => {
+	let posts: Post[];
+	posts = await getPosts();
 
-  return json(posts);
+	return json(posts);
 };

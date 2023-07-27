@@ -20,5 +20,5 @@ published: false
 Media inside the **static** folder can be referenced with the **$assets** variable.
 
 ### Image
-![Svelte](../../favicon.png)
 
+![Svelte](../../favicon.png)
