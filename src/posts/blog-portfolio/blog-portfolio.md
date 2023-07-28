@@ -27,4 +27,4 @@ The project was a simple blog/portfolio that allowed the user to see my projects
 
 ### The Technologies
 
-The project was created using Svelte and Svelte kit. I used OpenProps for the styling and my own svgs to make it more mine. Git and Github were used for version control and deployment. Currently deployed in Vercel and builded with Svelte Vercel Adapter.
+The project was created using Svelte and Svelte kit. I used OpenProps for the styling and my own svgs to make it more mine. Posts are locally stored and used through an API request. The "Contact" form is connected to a Supabase project to store the messages with the emails. Git and Github were used for version control and deployment. Currently deployed in Vercel and built with Svelte Vercel Adapter.
