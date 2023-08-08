@@ -1,6 +1,8 @@
 export type Categories =
 	| 'sveltekit'
 	| 'svelte'
+  | 'react'
+  | 'angular'
 	| 'test'
 	| 'thoughts'
 	| 'other'
@@ -9,6 +11,7 @@ export type Categories =
 	| 'HTML'
 	| 'entry-level'
 	| 'project';
+
 export type Post = {
 	title: string;
 	slug: string;

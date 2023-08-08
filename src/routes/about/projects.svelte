@@ -26,7 +26,8 @@
 		<div class="tags">
 			<a href="#projects">svelte</a>
 			<a href="#projects">react</a>
-			<a href="#projects">typescript</a>
+			<a href="#projects">angular</a>
+      <a href="#projects">typescript</a>
 		</div>
 		<ol>
 			{#each projects as project}
