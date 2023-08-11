@@ -6,11 +6,12 @@ categories:
   - 'project'
   - 'angular'
 published: true
-website: 'null'
+website: https://no-clipped.vercel.app/home
 repository: https://github.com/EBregains/no-clipped
 ---
 
 ### Click [here](https://github.com/EBregains/no-clipped) to see the repo
+### Or click [here](https://no-clipped.vercel.app/home) to see a demo
 
 ---
 
@@ -28,5 +29,5 @@ The project is an online store to display a grid of clothing products, with a qu
 
 ## Technologies
 
-It uses Angular as a framework, strongly typed with TypeScript, and styled with SCSS. Backend handled by NodeJS, and currently using Forms and Http modules from AngularCLI. Is not deployed yet, but willing to in a week or so.
+It uses Angular as a framework, strongly typed with TypeScript, and styled with SCSS. Backend handled by NodeJS, and currently using Forms, Http, and Routing modules from AngularCLI. Deployed on Vercel.
 
