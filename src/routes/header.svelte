@@ -67,6 +67,7 @@
 	nav {
 		padding-block: var(--size-2);
 		display: grid;
+    width: 100%;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-areas: 'title toggle links';
 		place-items: center;
@@ -148,7 +149,9 @@
 	@media (min-width: 768px) {
 		nav {
 			display: flex;
-			justify-content: space-evenly;
+      width: 90%;
+      justify-self: center;
+			justify-content: space-between;
 			align-items: center;
 			background: none;
 			border-bottom: none;

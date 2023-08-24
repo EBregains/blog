@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { fly, draw, fade } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import type { Post } from '$lib/types';
-	import { sineOut } from 'svelte/easing';
 	import Wheel from '$lib/svgs/Wheel.svelte';
 
 	export let projects: Post[];
@@ -64,7 +63,7 @@
 		padding-inline: var(--size-3);
 	}
 	.projects-container ol {
-		width: 80%;
+		width: 100%;
 		display: flex;
 		gap: var(--size-2);
 		flex-direction: column;
@@ -159,9 +158,6 @@
 		}
 		.blob {
 			display: none;
-		}
-		svg {
-			display: block;
 		}
 	}
 

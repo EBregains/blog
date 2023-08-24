@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	<div in:fly={{ x: -200 }}>
+	<div class='content' in:fly={{ x: -200 }}>
 		<hgroup>
 			<h2>Hi! I am</h2>
 			<h1>Emiliano</h1>
@@ -23,16 +23,21 @@
 <style>
 	section {
 		width: 100%;
-		/* display: flex;
-    grid-template-columns: 1fr 1fr; */
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		text-align: center;
+		text-align: start;
 		height: 510px;
-		padding-inline: var(--size-9);
 	}
-
+  .content  {
+    display: flex;
+    width: 50%;
+    padding-left: var(--size-fluid-7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: var(--size-2);
+  }
 	h2 {
 		font-size: var(--font-size-fluid-2);
 	}
@@ -53,8 +58,8 @@
 		border-radius: var(--radius-blob-5);
 	}
 	.blob {
-		width: 40%;
-		height: 90%;
+		width: 500px;
+    height: 500px;
 		display: flex;
 		justify-content: center;
 		align-items: center;

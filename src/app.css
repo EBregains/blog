@@ -32,7 +32,7 @@ html {
 	--background-light: linear-gradient(
 		to bottom,
 		var(--gray-0),
-		var(--gray-3)
+		var(--gray-1)
 	);
 	--border-light: var(--gray-4);
 
