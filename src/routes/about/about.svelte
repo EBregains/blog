@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { fly, draw, fade } from 'svelte/transition';
 	import type { PageData } from '../$types';
-	import { blob1 } from '$lib/blobs';
 </script>
 
 <section>

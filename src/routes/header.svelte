@@ -5,6 +5,10 @@
 
 	let active = false;
 
+  export function onClick() {
+    active = false;
+  }
+
 	$: routeId = $page.route.id;
 </script>
 
@@ -24,27 +28,29 @@
 		/>
 		<ol class="links" class:active>
 			<li>
-				<a on:click={() => (active = !active)} class:current={routeId === '/about'} href="/about"
+				<a on:click={() => onClick()}
+           class:current={routeId === '/about'}
+           href="/about"
 					>About</a
 				>
 			</li>
 			<li>
 				<a
-					on:click={() => (active = !active)}
+					on:click={() => onClick()}
 					class:current={routeId?.includes('/blog')}
 					href="/blog">Blog</a
 				>
 			</li>
 			<li>
 				<a
-					on:click={() => (active = !active)}
+					on:click={() => onClick()}
 					class:current={routeId === '/contact'}
 					href="/contact">Contact</a
 				>
 			</li>
 			<li>
 				<a
-					on:click={() => (active = !active)}
+					on:click={() => onClick()}
 					class:current={routeId === '/rss.xml'}
 					href="/rss.xml"
 					target="_blank">RSS</a
@@ -154,7 +160,7 @@
 			display: flex;
 			visibility: visible;
 			background: none;
-			position: relative;
+			position: static;
 			gap: var(--size-7);
 			box-shadow: none;
 		}
